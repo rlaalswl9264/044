@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: #333;
+    line-height: 1;
+}
+
+header {
+    width: 100%;
+    /* position줄때 width값 필요하면 100%로 주면 된다
+    원래크기 1920px로 주면 가로스크롤바 생겨서 불편해짐 */
+    height: 90px;
+    position: relative;
+    /* 부모한테 position: relative를 줘서 밑에 자식에게 해당됨 */
+    background-color: #023586;
+    color: #fff;
+    position: fixed; /* position: fixed; =>스크롤 내려도 해더 고정,방향설정 꼭 해야함 */
+    top: 0;
+    left: 0;
+}
+
+header .inner {
+    height: 100%;
+    /* 사진로고가 중앙에 위치한걸 볼수 있음 */
+    width: 1420px;
+    margin: 0 auto;
+}
+
+header .inner h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*  position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%); 이 공식 암기
+    사진을 line height,display해도  중앙에 위치 안되지만 저걸로 하면 가능 */
+}
+
+header .inner nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .inner nav>ul>li {
+    display: inline-block;
+    vertical-align: top;
+    /* vertical-align은 인라인요소의 수직정렬할때 사용
+    단, display: inline-block;요소가 있을 때만 사용가능, */
+    line-height: 90px;
+    margin: 0 10px;
+}
+
+.depth02 {
+    background-color: rgb(255, 255, 255);
+}
+
+header .inner nav ul li .depth02 {
+    line-height: 1;
+    color: #333;
+} 
+header .inner nav>ul>li .depth02 {
+    display: none;
+    color: #333;
+}
+header .inner nav>ul>li:hover .depth02 {
+    display: block;
+}
+header .inner nav>ul>li .depth02 li {
+    line-height: 1;
+    padding: 10px;
+}
+header .inner nav>ul>li .depth02 li:hover {
+    background-color: #023586;
+    color: #fff;
+}
+header .inner nav i {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 20px;
+}
+section {
+    height: 2000px;
+    /* 스크롤바 나오게 하기위해서 height: 2000px; 잡아줌 */
+}
+section img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}

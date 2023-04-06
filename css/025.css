@@ -1,0 +1,89 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'NotoSansKR';
+    src: url('font/NotoSansKR-Light-Alphabetic.eot');
+    src: url('font/NotoSansKR-Light-Alphabetic.eot?#iefix') format('embedded-opentype'),
+        url('font/NotoSansKR-Light-Alphabetic.woff2') format('woff2'),
+        url('font/NotoSansKR-Light-Alphabetic.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansKR';
+    src: url('font/NotoSansKR-Bold-Alphabetic.eot');
+    src: url('font/NotoSansKR-Bold-Alphabetic.eot?#iefix') format('embedded-opentype'),
+        url('font/NotoSansKR-Bold-Alphabetic.woff2') format('woff2'),
+        url('font/NotoSansKR-Bold-Alphabetic.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NotoSansKR';
+    src: url('font/NotoSansKR-Medium-Alphabetic.eot');
+    src: url('font/NotoSansKR-Medium-Alphabetic.eot?#iefix') format('embedded-opentype'),
+        url('font/NotoSansKR-Medium-Alphabetic.woff2') format('woff2'),
+        url('font/NotoSansKR-Medium-Alphabetic.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+/* font/해줘야 폰트가 연결됨 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #333;
+    line-height: 1;
+    font-family: 'NotoSansKR';
+}
+fieldset {
+    border: 0;
+}
+.login {
+    width: 800px;
+    margin: 100px auto;
+}
+.login form h3 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+.login form div:first-child label, 
+.login form div:nth-child(2) label {
+    position: absolute;
+    left: -9999999999px;
+}/* 눈에는 안보여야하지만 기록에는 남아있어야해서 */
+/* ,(쉼표)찍으면 선택자 추가가능 */
+.login form div input[type="text"],
+.login form div input[type="password"] {
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    border: 1px solid #333;
+    padding: 0 10px;
+}
+.login form div label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.login form div select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid#333;
+    margin: 5px 0;
+}
+.login form input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color:beige;
+    color: darkgray;
+    border: 0;
+}
+/* input과[](대괄호)사이에 뛰어쓰기 하면 안됨 */

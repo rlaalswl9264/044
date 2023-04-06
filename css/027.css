@@ -1,0 +1,267 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+    background-color: blanchedalmond;
+}
+
+.hd_01 {
+    height: 100px;
+    background-color: #fff;
+    border-bottom: 1px solid #333;
+}
+
+.hd_01 .inner {
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    line-height: 100px;
+}
+.hd_01 .inner h1 {
+    height: 100%;
+    position: relative;
+}
+.hd_01 .inner h1 a img {
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.hd_01 .inner nav .gnb .depth01 {
+    position: relative;
+    display: inline-block;
+    padding: 0 50px;
+    vertical-align: top;
+    /* 메뉴갯수가 동일하지 않아서 아래쪽 정렬되기때문에
+    vertical-align: top 을 사용해 위쪽으로 다시 정렬해줌
+    vertical-align(인라인 요소가 있을때 사용가능): 세로정렬기능  */
+}
+.hd_01 .inner nav .gnb .depth01 .depth02 {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    display: none;
+    padding: 20px 0;
+}
+.hd_01 .inner nav .gnb .depth01 .depth02 li {
+    line-height: 1;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+}
+.hd_01 .inner nav .gnb:hover .depth01 .depth02 {
+    display: block;
+}
+/* 헤더2차메뉴의 뒷배경컬러 만들기 */
+.hd_01 .inner nav .gnb::before {
+    content: '';
+    width: 100%;
+    height: 180px;
+    background-color: #b8b1b1;
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
+.hd_01 .inner nav .gnb:hover::before {
+    display: block;
+}
+.hd_01 .inner nav .gnb .depth01:hover .depth02 {
+    background-color: #fff;
+    
+}
+.hd_01 .inner .menu li {
+    display: inline-block;/* 세로에서 ->가로로 나열 */
+    margin-left: 10px;
+}
+.hd_01 .inner nav .gnb .depth01:hover .depth02::before {
+    content: '';
+    height: 180px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+}
+.hd_02 {
+    background-color: #fff;
+    margin-top: 200px;
+    border-bottom: 1px solid #333;
+    border-top: 1px solid #333;
+    position: relative;
+}
+
+.hd_02 .inner {
+    width: 1280px;
+    margin: 0 auto;
+}
+.hd_02 .inner .hd_top {
+    text-align: right;
+} 
+.hd_02 .inner .hd_top::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    display: block;
+    /* 가상선택자는 인라인 요소라서 display: block;을 통해 바꿔줘야 나타남 */
+    position: absolute;
+    top: 50px;
+    left: 0;
+    
+}
+
+.hd_02 .inner .hd_top li {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 15px;  
+} 
+.hd_02 .inner .hd_bottom {
+    height: 80px;
+    line-height: 80px;
+    /* 이미지는 라인하 이트 적용x ,포지션 or flex사용해서 적용 */
+    display: flex;
+    justify-content: space-between;
+}
+.hd_02 .inner .hd_bottom h1 a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* align-items: center; 수직가운데정렬 */
+}
+.hd_02 .inner .hd_bottom h1 a img {
+    height: 60px;
+    /* height값 지정해주면 width알아서조정 */
+}
+.hd_02 .inner .hd_bottom nav .gnb .depth01 {
+    display: inline-block;
+    padding: 0 40px;
+    vertical-align: top;
+    text-align: center;
+    position: relative;
+}
+.hd_02 .inner .hd_bottom nav .gnb .depth01 li {
+    line-height: 1;
+    padding: 20px 0;
+}
+.hd_02 .inner .hd_bottom nav .gnb .depth01 .depth02 {
+    display: none;
+    width: 100%;
+    position: absolute;
+    /*  position: absolute;값만 잡아주면 영역을 글자만큼만 잡기때문에
+    width값도 잡아줘야함 */
+    top: 80PX;
+    left: 0; 
+}
+.hd_02 .inner .hd_bottom nav .gnb .depth01:hover .depth02 {
+    display: block;
+    background-color: #b8b1b1;
+    color: #fff;
+}
+.hd_03 {
+    background-color: rgb(255, 255, 255);
+    margin: 200px 0;
+    border-top: 1px solid #bbff00;
+    border-bottom: 1px solid #bbff00;
+    position: relative;
+}
+.hd_03 .inner {
+    width: 1280px;
+    margin: 0 auto;
+    
+}
+.hd_03 .inner .hd_top {
+    height: 80px;
+    line-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.hd_03 .inner .hd_top ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.hd_03 .inner .hd_top h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 10px 0;
+    
+}
+.hd_03 .inner .hd_top h1 a img {
+    height: 60px;
+}
+.hd_03::before {
+    content: '';
+    width: 100%;
+    background-color: #ce3a3a;
+    height: 1px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+}/* hd_top과 inner에 포지션이 이미 잡혀있기때문에
+hd_03에 가상선택자를 이용해 밑에줄을 만들어준다 */
+
+.hd_03 .inner nav {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+} /* display: inline-block;이 된상태에서 글자중앙정렬할때
+그 부모한테 text-align: center; 준다 */
+
+.hd_03 .inner nav .gnb .depth01 {
+    display: inline-block;
+    padding: 0 50px;
+    text-align: center;
+    vertical-align: top;
+    position: relative;
+}
+.hd_03 .inner nav .gnb .depth01 .depth02 {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+    display: none;
+} /* 마우스 호버할때 세부메뉴글자개수가 많아서 위에 메뉴글자가
+움직이기 때문에 이방법을 통해서 고정시켜줌 */
+
+.hd_03 .inner nav .gnb::before{
+    content: '';
+    width: 100%;
+    height: 200px;
+    background-color: #aca5a5;
+    position: absolute;
+    top: 130px;
+    left: 0;
+    display: none;
+} /* hover선택자 gnb와 depth01 둘다 선택가능  */
+.hd_03 .inner nav .gnb:hover::before {
+    display: block;
+}
+.hd_03 .inner nav .gnb:hover .depth01 .depth02 {
+    display: block;
+    color: #fff;
+}

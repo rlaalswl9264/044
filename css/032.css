@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    color: #333;
+    line-height: 1;
+}
+.main_visual {
+    width: calc(100% - 100px);
+    height: 700px;
+    margin: 50px auto;
+}
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* 공통 .title */
+.title {
+    margin-bottom: 40px;
+}
+.title h3 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.title p {
+    font-size: 20px;
+}
+/* ✨ .cont01 */
+.cont01 {
+    margin: 100px 0;
+}
+.cont01 .inner {
+    width: calc(100% - 100px);
+    /* 넓이 100%에서 좌우50px를 뺀 값 */
+    margin: 0 auto;
+}
+.cont01 .inner ul {
+    display: flex;
+    justify-content: space-between;
+}
+.cont01 .inner ul li {
+    width: calc(100% / 10 - 20px);
+    height: calc((100vw - 100px) / 10 - 20px);
+    /* -20px => 글자사이 간격 20px로 떨어트려줌
+    식에서 곱셈과 나누셈이 우선적으로 적용되기 때문에 괄호를 이용해 먼저 계산될 부분 잡아줌 */
+    background-color: rgb(237, 241, 173);
+    color: #707070;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text aline은 도형이 변함에 따라 중앙정렬이 어려워 안씀 */
+}
+/* ✨ .cont02 */
+.cont02 {
+    background: url('../img/main_contents01_img01_221107.jpg') center center / cover no-repeat;
+    padding: 100px 0;
+    background-attachment: fixed;
+    /* background-attachment: fixed; 배경화면 늘어나지 않고 고정 */
+}/* css파일안에 이미지 불러올때 '../img/ '사용함 */
+/* center center를 이용해 x축 중간, y축 중간 */
+/* size- cover, 이미지 반복되지 않게 no-repeat */
+
+.cont02 .inner {
+    width: 1440px;
+    margin: 0 auto;
+}
+.cont02 .inner .title {
+    color: #fff;
+}
+.cont02 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont02 .inner .list .item {
+    width: calc(100% / 5 - 20px);
+    background-color: #fff;
+    padding: 20px;
+    
+}
+.cont02 .inner .list .item:hover {
+    transform: translateY(-15px);
+    transform: 0.7s;
+}
+.cont02 .inner .list .item figure {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+.cont02 .inner .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+/* img.img_after => hover할때 나타날 이미지 */
+.cont02 .inner .list .item:hover figure img.img_after {
+    opacity: 1;
+}
+.cont02 .inner .list .item figure .img_after {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cont02 .inner .list .item figure img {
+    transition: 0.7s;
+}
+/* figure 안안에 있는 태그 */
+.cont02 .inner .list .item figure p {
+    height: 30px;
+    font-size: 14px;
+    background-color: #505050;
+    color: #fff;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 10px;
+}
+

@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+.cont01 {
+    width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    
+}
+.cont01 h3 {
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+.cont01 .list {
+    justify-content: space-between;
+    display: flex;
+    
+}
+.cont01 .list .item {
+    width: 464px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.cont01 .list .item .box {
+    width: 464px;
+    height: 300px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+.cont01 .list .item:nth-child(2) .box {
+    height: 630px;
+}
+.cont01 .list .item .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+
+
+}
+.cont01 .list .item:nth-child(2) {
+    height: 630px;
+}
+.cont01 .list .item:nth-child(2) img {
+
+    width: 100%;
+    height: 630px;
+    object-fit: cover;
+}
+.cont01 .list .item .box{
+    position: relative;
+   
+}
+.cont01 .list .item .box div {
+    text-align: left;
+    position:absolute;
+    left: 40px;
+    bottom: 30px;
+}
+.cont01 .list .item .box div h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.cont01 .list .item .box div p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.cont01 .list .item .box div {
+    color: hsl(0, 0%, 100%);
+}
+.cont02 {
+
+    background-color: darkgreen;
+}
+.cont02 h3 {
+    color: #fff;
+    font-size: 60px;
+    padding-top: 100px;
+    width: 1440px;
+    margin: 0 auto;
+   
+}
+.cont02 .list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    margin: 0 auto;
+}
+.cont02 .list .item {
+    width: 464px;
+}
+.cont02 .list .item p {
+    font-size: 24px;
+    width: 952px;
+    height: 458px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    padding: 60px 70px;
+    border-radius: 20px;
+
+} 
+.cont02 .list .item ul {
+    width: 464px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    
+}
+.cont02 .list .item ul li {
+    width: 464px;
+    height: 135px;
+    background-color: #fff;
+    padding: 0 40px;
+    line-height: 135px;
+    border-radius: 20px;
+}

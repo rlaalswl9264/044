@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    line-height: 1;
+    /* line-height: 1; = 폰트사이즈와 똑같이 하겠다는 의미 */
+    color: #333;
+}
+h3 {
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+/* 💨 .cont01 */
+.cont01 {
+    width: 1440px;
+    margin: 100px auto;
+}
+
+.cont01 .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont01 .list .item_wrap {
+    width: 464px;
+    display: flex;
+    flex-wrap: wrap;
+    /*  flex-wrap =>나열된 요소들의 총 넓이가 부모넓이보다 클때 이 요소들을 다음줄에 이어서 나열 */
+    align-content: space-between;
+}
+.cont01 .list .item_wrap .item {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+.cont01 .list .item_wrap .item figure {
+    width: 100%;
+    height: 100%;
+}
+.cont01 .list .item_wrap .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .list .item_wrap .item div  {
+    position: absolute;
+    left: 40px;
+    bottom: 30px;
+    color: #fff;
+}
+.cont01 .list .item_center {
+    width: 464px;
+    height: 630px;
+    position: relative;
+}
+.cont01 .list .item_center figure {
+    width: 100%;
+    height: 100%;
+}
+.cont01 .list .item_center figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .list .item_center div {
+    position: absolute;
+    left: 40px;
+    bottom: 30px;
+    color: #fff;
+}
+.cont01 .list div h4 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.cont01 .list figure {
+    overflow: hidden;
+    /* figure보다 벗어나는 이미지 영역 숨김처리 */
+}
+.cont01 .list figure img {
+    border-radius: 20px;
+    transition: 1s;
+    /* transition =>변화가 일정시간 일어나는것 */
+}
+.cont01 .list figure:hover img {
+    transform: scale(1.2); /* 이미지 1.2배 확대 */
+    /* transform:scale => 확대 or 축소 */
+}
+/* 💨 .cont02 */
+.cont02 {
+    background-color: rgb(34, 80, 30);
+    padding: 100px 0;
+}
+.cont02 .inner {
+    width: 1440px;
+    margin: 0 auto;
+}
+.cont02 .inner h3 {
+    color: #fff;
+}
+.cont02 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont02 .inner .list .item {
+    width: 952px;
+    height: 458px;
+    background-color: #fff;
+    font-size: 24px;
+    padding: 60px 70px;
+    border-radius: 20px;
+}
+.cont02 .inner .list .item_wrap {
+    width: 464px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.cont02 .inner .list .item_wrap div {
+    position: relative;
+    width: 100%;
+    height: 135px;
+    background-color: #fff;
+    font-size: 24px;
+    border-radius: 20px;
+    padding: 0 40px;
+    line-height: 135px;
+}
+.cont02 .inner .list .item_wrap div::before {
+    content: '';
+    display: block;
+    background-image: url('../img/icons8-_-24.png');
+    background-size: 100% 100%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
